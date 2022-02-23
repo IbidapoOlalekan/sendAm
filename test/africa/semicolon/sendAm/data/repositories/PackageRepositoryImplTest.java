@@ -91,7 +91,6 @@ class PackageRepositoryImplTest {
     @Test
     void findAllTest(){
         saveThreePackages();
-
         List<Package> all = packageRepository.findAll();
         assertEquals(3,all.size());
     }
