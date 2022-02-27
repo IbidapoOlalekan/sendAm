@@ -6,6 +6,8 @@ public class User {
     private String phoneNumber;
     private String address;
 
+
+
     public String getEmail() {
         return email;
     }
@@ -37,4 +39,6 @@ public class User {
     public void setAddress(String address) {
         this.address = address;
     }
+
+
 }
