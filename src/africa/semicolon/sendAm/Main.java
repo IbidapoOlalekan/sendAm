@@ -5,14 +5,18 @@ import africa.semicolon.sendAm.controllers.UserController;
 import africa.semicolon.sendAm.dtos.requests.RegisterUserRequest;
 import africa.semicolon.sendAm.dtos.responses.FindUserResponse;
 import africa.semicolon.sendAm.dtos.responses.RegisterUserResponse;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Scanner;
 
+@SpringBootApplication
 public class Main {
     public static UserController userController = new UserController() ;
     public static void main(String[] args) {
+        SpringApplication.run(Main.class,args);
         //load options
-        loadOptions();
+        //loadOptions();
         // if option is register
             // load form
             //print output
