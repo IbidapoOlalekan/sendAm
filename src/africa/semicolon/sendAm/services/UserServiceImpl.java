@@ -34,6 +34,7 @@ public class UserServiceImpl implements UserService{
         return user != null;
     }
 
+    @Override
     public UserRepository getRepository() {
         return userRepository;
     }

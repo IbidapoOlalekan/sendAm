@@ -4,6 +4,7 @@ public class RegisterUserResponse {
     private String fullName;
     private String email;
 
+
     public String getFullName() {
         return fullName;
     }

@@ -40,5 +40,14 @@ public class User {
         this.address = address;
     }
 
-
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("User{");
+        sb.append("email='").append(email).append('\'');
+        sb.append(", fullName='").append(fullName).append('\'');
+        sb.append(", phoneNumber='").append(phoneNumber).append('\'');
+        sb.append(", address='").append(address).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }

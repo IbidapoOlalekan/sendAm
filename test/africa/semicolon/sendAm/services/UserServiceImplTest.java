@@ -33,8 +33,7 @@ class UserServiceImplTest {
         registerForm.setPhoneNumber("2MillionDollars");
         return registerForm;
     }
-
-    @Test void duplicateEmail_throwsExceptionTest(){
+       @Test void duplicateEmail_throwsExceptionTest(){
         RegisterUserRequest lotaForm = createRegisterForm();
         //when
         userService.register(lotaForm);
