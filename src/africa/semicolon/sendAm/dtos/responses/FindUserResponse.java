@@ -19,4 +19,13 @@ public class FindUserResponse {
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("FindUserResponse{");
+        sb.append("email='").append(email).append('\'');
+        sb.append(", fullName='").append(fullName).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }

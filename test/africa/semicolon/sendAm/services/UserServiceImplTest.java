@@ -83,9 +83,10 @@ class UserServiceImplTest {
     public void findByUserEmailIsNotCaseSensitive(){
         RegisterUserRequest lotaForm = createRegisterForm();
         userService.register(lotaForm);
+        //when
         FindUserResponse result =  userService.findUserByEmail("seniorDevLota@gmail.com");
+        //assert
         assertEquals("Lotachi Senior Dave",result.getFullName());
-
         assertEquals("seniordevlota@gmail.com",result.getEmail());
     }
 

@@ -20,4 +20,13 @@ public class RegisterUserResponse {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("RegisterUserResponse{");
+        sb.append("fullName='").append(fullName).append('\'');
+        sb.append(", email='").append(email).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }
