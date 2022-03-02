@@ -5,6 +5,7 @@ import africa.semicolon.sendAm.data.repositories.PackageRepository;
 import africa.semicolon.sendAm.data.repositories.UserRepository;
 import africa.semicolon.sendAm.data.repositories.UserRepositoryImpl;
 import africa.semicolon.sendAm.dtos.requests.RegisterUserRequest;
+import africa.semicolon.sendAm.dtos.responses.FindUserResponse;
 import africa.semicolon.sendAm.dtos.responses.RegisterUserResponse;
 import africa.semicolon.sendAm.exceptions.RegisterFailureException;
 
@@ -37,5 +38,16 @@ public class UserServiceImpl implements UserService{
     @Override
     public UserRepository getRepository() {
         return userRepository;
+    }
+
+    @Override
+    public FindUserResponse findUserByEmail(String email) {
+        User user = userRepository.findByEmail(email);
+        // create response
+        FindUserResponse response = new FindUserResponse();
+        response.setEmail(user.getEmail());
+        response.setFullName(user.getFullName());
+        //return response
+        return response;
     }
 }
