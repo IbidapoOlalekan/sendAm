@@ -1,12 +1,12 @@
 package africa.semicolon.sendAm.dtos.responses;
 
-import africa.semicolon.sendAm.data.models.PackageDescription;
 import africa.semicolon.sendAm.data.models.Status;
 
 public class AddPackageResponse {
     private int id;
-    private String emailAddress;
-    private PackageDescription description;
+    private String name;
+    private double weightInGrammes;
+    private Status status;
 
     public int getId() {
         return id;
@@ -16,20 +16,20 @@ public class AddPackageResponse {
         this.id = id;
     }
 
-    public String getEmailAddress() {
-        return emailAddress;
+    public String getName() {
+        return name;
     }
 
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress.toLowerCase();
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public PackageDescription getDescription() {
-        return description;
+    public double getWeightInGrammes() {
+        return weightInGrammes;
     }
 
-    public void setDescription(PackageDescription description) {
-        this.description = description;
+    public void setWeightInGrammes(double weightInGrammes) {
+        this.weightInGrammes = weightInGrammes;
     }
 
     public Status getStatus() {
@@ -39,7 +39,4 @@ public class AddPackageResponse {
     public void setStatus(Status status) {
         this.status = status;
     }
-
-    private Status status;
-
 }
